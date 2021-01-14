@@ -303,7 +303,7 @@ void disprange_aggregation(int disparityRange,unsigned long ***C, unsigned int *
             for(int pdisp=0;pdisp<disparityRange;pdisp++)
             {
 
-                if((A[current_path][curx][cury-direction_y][pdisp]+LARGE_PENALTY)<term_1)
+                if((A[current_path][curx-direction_x][cury-direction_y][pdisp]+LARGE_PENALTY)<term_1)
                     term_1=A[current_path][curx- direction_x][cury-direction_y][pdisp]+LARGE_PENALTY;
             }
             A[current_path][curx][cury][d]=C[curx][cury][d]+min(term_1,term_2)-last_aggregated_k;
